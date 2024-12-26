@@ -1,0 +1,82 @@
+:root {
+	--clr: brown;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+button {
+	padding: 1em 2em;
+	outline: none;
+	border: none;
+}
+
+.ho {
+	position: absolute;
+	top: 0;
+	left: 20%;
+}
+
+[type='checkbox']:checked ~ h3 {
+	color: blue;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	background-color: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	transition: all 200ms ease;
+}
+
+ul {
+	display: flex;
+	list-style: none;
+}
+
+nav span {
+	background-color: yellow;
+	width: 50px;
+	z-index: 3;
+	height: 30px;
+}
+.btn {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: green;
+	margin-top: -50px;
+	/* for positioning */
+	margin-left: -50px;
+	border-radius: 30%;
+
+	animation: ripple 200ms;
+}
+
+/* Add animation */
+@keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	to {
+		opacity: 0.9;
+		transform: scale(10);
+	}
+}
